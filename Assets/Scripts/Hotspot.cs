@@ -12,7 +12,7 @@ public class Hotspot : MonoBehaviour
     void Awake()
     {
         mr = this.GetComponent<MeshRenderer>();
-        // mr.enabled = false;
+        mr.enabled = false;
         float indicatorX = areaIndicator.transform.localPosition.x;
         float indicatorY = areaIndicator.transform.localPosition.y;
         float indicatorZ = areaIndicator.transform.localPosition.z;
@@ -27,7 +27,7 @@ public class Hotspot : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Player has passed through hotspot");
-            // mr.enabled = true;
+            mr.enabled = true;
         }
     }
 }
