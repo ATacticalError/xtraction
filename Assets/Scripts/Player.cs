@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -21,7 +22,16 @@ public class Player : MonoBehaviour
     public LayerMask patrolPointLayermask;
 
     public AbilityManager abManager;
+    public MapManager mapManager;
 
+    public Text mapManagerStatus;
+
+    public void FindMapManager() { 
+        mapManager = GameObject.FindGameObjectWithTag("MapManager").GetComponent<MapManager>();
+        if(mapManager)
+            mapManagerStatus.text = "Found";
+        mapManager.InitialiseMapManager();
+     }
 
     void Awake()
     {

@@ -21,14 +21,10 @@ public class MapManager : MonoBehaviour
     [SerializeField]
     private List<Patrol> disabledPatrols = new List<Patrol>();
 
-    void Awake()
-    {
+    public void InitialiseMapManager() {
         patrolPoints.AddRange(GameObject.FindGameObjectsWithTag("PatrolPoint"));
         GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>().SetMapManager(this);
-    }
 
-    void Start()
-    {
         for (int i = patrolAmount; i > 0; i--)
         {
             Patrol p;
@@ -43,7 +39,13 @@ public class MapManager : MonoBehaviour
         foreach(var tile in activeTiles){
             tile.Value.MeshRenderer.material.SetFloat("_Glossiness", 0);
         }
+    }
 
+    void Start()
+    {
+#if UNITY_EDITOR
+   // InitialiseMapManager();
+#endif
     }
 
     public void ApplyInvisibility(float seconds)
