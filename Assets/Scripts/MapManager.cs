@@ -21,30 +21,27 @@ public class MapManager : MonoBehaviour
     [SerializeField]
     private List<Patrol> disabledPatrols = new List<Patrol>();
 
-    public void InitialiseMapManager() {
+    public void InitialiseMapManager()
+    {
         patrolPoints.AddRange(GameObject.FindGameObjectsWithTag("PatrolPoint"));
-        GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>().SetMapManager(this);
-
+        Debug.Log("patrol points found");
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>().SetMapManager(this);
+        print(patrolAmount);
         for (int i = patrolAmount; i > 0; i--)
         {
             Patrol p;
             p = Instantiate(patrolPrefab, Vector3.zero, Quaternion.identity).GetComponent<Patrol>();
+            print(p);
             p.transform.position = patrolPoints[Random.Range(0, patrolPoints.Count)].transform.position;
             p.SetManager(this);
             patrols.Add(p);
-        }
-        
-        AbstractMap map = GameObject.FindGameObjectWithTag("Map").GetComponent<AbstractMap>();
-        var activeTiles = map.MapVisualizer.ActiveTiles;
-        foreach(var tile in activeTiles){
-            tile.Value.MeshRenderer.material.SetFloat("_Glossiness", 0);
         }
     }
 
     void Start()
     {
 #if UNITY_EDITOR
-   // InitialiseMapManager();
+        // InitialiseMapManager();
 #endif
     }
 

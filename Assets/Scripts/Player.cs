@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
         if(mapManager)
             mapManagerStatus.text = "Found";
         mapManager.InitialiseMapManager();
+        abManager.SetMapManager(mapManager);
      }
 
     void Awake()
