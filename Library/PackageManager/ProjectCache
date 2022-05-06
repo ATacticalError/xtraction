@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637870379821508664
-    m_Hash: 728776223
+      ticks: 637870418442375328
+    m_Hash: 3529745186
   m_LockFileStatus:
     m_FilePath: C:/Users/muenj/source/repos/xtraction/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637870379830410348
-    m_Hash: 2249468046
+      ticks: 637870418442385299
+    m_Hash: 173850735
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
