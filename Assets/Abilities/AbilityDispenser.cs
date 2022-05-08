@@ -6,14 +6,25 @@ public class AbilityDispenser : MonoBehaviour
 {
     public Ability ability;
     public AbilityManager abilityManager;
+    public bool useLootTable = true;
     public AbilityLootTable lootTable;
 
     void Start() {
+        // FindAbilityMananger();
+    }
+
+    void FindAbilityMananger(){
         abilityManager = GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>();
+        Debug.LogWarning("Looking for ability manager");
     }
 
     public void GiveAbility()
     {
-        abilityManager.AddAbility(lootTable.GetRandomWeightedAbility());
+        // if(!abilityManager)
+        //     FindAbilityMananger();
+        if(useLootTable)
+            abilityManager.AddAbility(lootTable.GetRandomWeightedAbility());
+        else
+            abilityManager.AddAbility(ability);
     }
 }

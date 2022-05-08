@@ -637,11 +637,11 @@ RectTransform:
   m_Father: {fileID: 230672827}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.2538018}
+  m_AnchorMax: {x: 0.25300002, y: 0.32220718}
+  m_AnchoredPosition: {x: 1.7109985, y: -1.1399994}
+  m_SizeDelta: {x: -3, y: 2}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &454587752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,7 +655,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: 2f7f247465b12c04aab9331368ec728f, type: 2}
-  abilityManager: {fileID: 0}
+  abilityManager: {fileID: 5240002023841849674}
+  useLootTable: 0
   lootTable:
     abilityLootItems: []
 --- !u!114 &454587753
@@ -1509,10 +1510,10 @@ RectTransform:
   m_Father: {fileID: 230672827}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -36}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.74829483, y: 0.2538018}
+  m_AnchorMax: {x: 1, y: 0.32220718}
+  m_AnchoredPosition: {x: 1.5, y: 1}
+  m_SizeDelta: {x: -2, y: 2}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1216805716
 MonoBehaviour:
@@ -1527,7 +1528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: a1f9164af8ca5be44bbfd71aa585eae4, type: 2}
-  abilityManager: {fileID: 0}
+  abilityManager: {fileID: 5240002023841849674}
+  useLootTable: 1
   lootTable:
     abilityLootItems:
     - ability: {fileID: 11400000, guid: a1f9164af8ca5be44bbfd71aa585eae4, type: 2}
@@ -6677,7 +6679,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 9021427814672259873}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5240002023841849673}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 061d2afb48ace4fd19611279b6cf732f, type: 3}
   m_Name: 
@@ -6800,7 +6802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5241726052889076459
 GameObject:
   m_ObjectHideFlags: 0
@@ -7304,7 +7306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3755154983799586126, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3755154983799586126, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
       propertyPath: latLongText
@@ -7312,7 +7314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3755471288302817830, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3755471288302817830, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
       propertyPath: _useNegativeAngle
@@ -7328,7 +7330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3858097100515818091, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
       propertyPath: canMove
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3858097100515818091, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
       propertyPath: m_Enabled
