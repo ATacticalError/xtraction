@@ -32,15 +32,17 @@ public struct AbilityLootTable
 
         foreach (AbilityLootItem itm in abilityLootItems)
         {
+            int currentRangeMax = (currentRangeMin + itm.chance);
             // if the random value is between the cur min and max
-            if (randomLootValue > currentRangeMin && randomLootValue < (currentRangeMin + itm.chance))
+            Debug.Log("Current range min: " + currentRangeMin + "/max: " + currentRangeMax + "randomLootValue: " + randomLootValue);
+            if (randomLootValue > currentRangeMin && randomLootValue <= currentRangeMax)
             {
                 return itm.ability;
             }
             // Otherwise, update the minimum and move onto next item in array
             currentRangeMin += itm.chance;
         }
-        Debug.LogError("Loot table is null or empty");
+        Debug.LogError("Loot table is null or empty.");
         return null;
     }
 

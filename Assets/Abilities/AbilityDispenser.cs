@@ -14,6 +14,7 @@ public class AbilityDispenser : MonoBehaviour
     }
 
     void FindAbilityMananger(){
+        // This doesn't work on android. Why doesn't this work?
         abilityManager = GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>();
         Debug.LogWarning("Looking for ability manager");
     }

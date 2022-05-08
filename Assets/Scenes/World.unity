@@ -1557,7 +1557,7 @@ MonoBehaviour:
     - ability: {fileID: 11400000, guid: e8b54adca3211244fa277048b1a00b64, type: 2}
       chance: 4
     - ability: {fileID: 11400000, guid: 88ec53f8b7d17694392d84506405a3c6, type: 2}
-      chance: 5
+      chance: 4
 --- !u!114 &1216805717
 MonoBehaviour:
   m_ObjectHideFlags: 0
