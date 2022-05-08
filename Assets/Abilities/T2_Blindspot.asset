@@ -9,18 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078f5f59eabc6f048b7a7e3ea9ca3a59, type: 3}
-  m_Name: Invisibility_T2
+  m_Script: {fileID: 11500000, guid: 91566d4f590cfe1478bad60d008f2ee2, type: 3}
+  m_Name: T2_Blindspot
   m_EditorClassIdentifier: 
-  abilityName: Invisibility Tier 2
-  abilityDescription: Become invisible to patrols for 10 seconds
+  abilityName: Blindspot T2
+  abilityDescription: Decrease patrols sight by 40%
   upgradeTier: 1
+  abilityManager: {fileID: 0}
   abilityButtonPrefab: {fileID: 7657010118905099637, guid: 41291b30a83c9d24190c2b92fa1fa5fd, type: 3}
+  abilityButtonObject: {fileID: 0}
   abilityButton: {fileID: 0}
   abilityButtonText: {fileID: 0}
   icon: {fileID: 0}
   model: {fileID: 0}
-  abilityManager: {fileID: 0}
-  secondsT1: 5
-  secondsT2: 10
-  secondsT3: 15
+  singleUse: 1
+  nextTier: {fileID: 11400000, guid: c43774c336c5cc5468dcb00a1129fc36, type: 2}

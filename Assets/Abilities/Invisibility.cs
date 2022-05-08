@@ -11,19 +11,20 @@ public class Invisibility : Ability
     public override void Initialise(AbilityManager ab)
     {
         base.Initialise(ab);
-        abilityButton.onClick.AddListener(TriggerAbility);
-        ApplyTier();
     }
 
     public override void TriggerAbility()
     {
-        if(abilityManager)
-            abilityManager.InvisibleEvent(invisibleSeconds);
-        else
+        if (!abilityManager)
+        {
             Debug.Log("No Ability Manager, could not run Invisibility");
+            return;
+        }
+        abilityManager.InvisibleEvent(invisibleSeconds);
+        base.TriggerAbility();
     }
 
-    void ApplyTier()
+    public override void ApplyTier()
     {
         switch (upgradeTier)
         {

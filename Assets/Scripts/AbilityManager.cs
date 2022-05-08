@@ -8,15 +8,7 @@ public class AbilityManager : MonoBehaviour
     public LayoutGroup AbilityTray;
     [SerializeField]
     private List<Ability> currentAbilities;
-    //    public Button InvisibleButton;
-    //    public float invisibleSeconds = 5.0f;
-//    public Button BlindspotButton;
-//    public float blindspotPercentage = 0.2f;
-    public Button PocketSandButton;
-    public int pocketsandMinutes = 1;
-    public Button RoadworkButton;
-    public int roadworkMinutes = 1;
-    public Button AssassinButton;
+    private int rwMinutes;
 
     public MapManager mapManager;
 
@@ -36,8 +28,10 @@ public class AbilityManager : MonoBehaviour
 
     public void SetMapManager(MapManager manager) { mapManager = manager; }
 
-    public void RemoveAbility(Ability ab) {
-        if(currentAbilities.Contains(ab)){
+    public void RemoveAbility(Ability ab)
+    {
+        if (currentAbilities.Contains(ab))
+        {
             currentAbilities.Remove(ab);
         }
     }
@@ -74,7 +68,7 @@ public class AbilityManager : MonoBehaviour
         Debug.Log("Applying Blindspot");
     }
 
-    public void PocketSandEvent()
+    public void PocketSandEvent(int pocketsandMinutes)
     {
         if (!mapManager)
             return;
@@ -82,8 +76,9 @@ public class AbilityManager : MonoBehaviour
         Debug.Log("Applying Pocket Sand");
     }
 
-    public void RoadworkEvent()
+    public void RoadworkEvent(int roadworkMinutes)
     {
+        rwMinutes = roadworkMinutes;
         player.selectionType = SelectionType.Roadwork;
         Debug.Log("Applying Roadwork");
     }
@@ -100,7 +95,7 @@ public class AbilityManager : MonoBehaviour
     {
         if (!mapManager)
             return;
-        mapManager.ApplyRoadwork(roadworkMinutes, patrolPoint);
+        mapManager.ApplyRoadwork(rwMinutes, patrolPoint);
         player.selectionType = SelectionType.Movement;
     }
 

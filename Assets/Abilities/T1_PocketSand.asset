@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91566d4f590cfe1478bad60d008f2ee2, type: 3}
-  m_Name: Blindspot_T1
+  m_Script: {fileID: 11500000, guid: 1a88e438d2477ca4fbe75d21a4475780, type: 3}
+  m_Name: T1_PocketSand
   m_EditorClassIdentifier: 
-  abilityName: Blindspot T1
-  abilityDescription: Decrease patrols sight by 20%
+  abilityName: PocketSand Tier 1
+  abilityDescription: Stuns patrols in place for 1 minute
   upgradeTier: 0
+  abilityManager: {fileID: 0}
   abilityButtonPrefab: {fileID: 7657010118905099637, guid: 41291b30a83c9d24190c2b92fa1fa5fd, type: 3}
   abilityButtonObject: {fileID: 0}
   abilityButton: {fileID: 0}
   abilityButtonText: {fileID: 0}
   icon: {fileID: 0}
   model: {fileID: 0}
-  abilityManager: {fileID: 0}
-  singleUse: 1
+  singleUse: 0
+  nextTier: {fileID: 11400000, guid: d3187e56d1c6f0b4a86ec759d42b7451, type: 2}

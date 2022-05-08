@@ -6,6 +6,7 @@ public class AbilityDispenser : MonoBehaviour
 {
     public Ability ability;
     public AbilityManager abilityManager;
+    public AbilityLootTable lootTable;
 
     void Start() {
         abilityManager = GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>();
@@ -13,6 +14,6 @@ public class AbilityDispenser : MonoBehaviour
 
     public void GiveAbility()
     {
-        abilityManager.AddAbility(ability);
+        abilityManager.AddAbility(lootTable.GetRandomWeightedAbility());
     }
 }

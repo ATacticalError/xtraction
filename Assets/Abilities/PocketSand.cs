@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Abilities/Blindspot")]
-public class Blindspot : Ability
+[CreateAssetMenu(menuName = "Abilities/PocketSand")]
+public class PocketSand : Ability
 {
-    private float percentage = 0.2f;
+    private int minutes = 1;
 
     public override void Initialise(AbilityManager ab)
     {
@@ -16,10 +16,10 @@ public class Blindspot : Ability
     {
         if (!abilityManager)
         {
-            Debug.Log("No Ability Manager, could not run Blindspot");
+            Debug.Log("No Ability Manager, could not run PocketSand");
             return;
         }
-        abilityManager.BlindspotEvent(percentage);
+        abilityManager.PocketSandEvent(minutes);
         base.TriggerAbility();
     }
 
@@ -28,10 +28,10 @@ public class Blindspot : Ability
         switch (upgradeTier)
         {
             case UpgradeTier.Tier2:
-                percentage += 0.2f;
+                minutes += 1;
                 break;
             case UpgradeTier.Tier3:
-                percentage += 0.4f;
+                minutes += 2;
                 break;
         }
     }

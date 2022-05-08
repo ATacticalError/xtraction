@@ -6,16 +6,21 @@ public abstract class Ability : ScriptableObject
     public string abilityName = "AbilityName";
     public string abilityDescription = "AbilityDescription";
     public UpgradeTier upgradeTier;
+
+    [HideInInspector] public AbilityManager abilityManager;
+
     public GameObject abilityButtonPrefab;
     public GameObject abilityButtonObject;
-    public Button abilityButton;
-    public Text abilityButtonText;
+    [HideInInspector] public Button abilityButton;
+    [HideInInspector] public Text abilityButtonText;
+
     public Sprite icon;
     public GameObject model;
-    public AbilityManager abilityManager;
+
     public bool singleUse;
-    public int maxStack = 3;
-    public int currentCount = 1;
+
+    public Ability nextTier;
+
 
     public virtual void Initialise(AbilityManager ab)
     {
@@ -29,6 +34,32 @@ public abstract class Ability : ScriptableObject
             return;
         }
         abilityButtonText.text = abilityName;
+        abilityButton.onClick.AddListener(TriggerAbility);
+        ApplyTier();
     }
-    public abstract void TriggerAbility();
+
+    public virtual void TriggerAbility()
+    {
+        if (singleUse)
+        {
+            DestroyAbility();
+        }
+    }
+
+    public virtual void DestroyAbility()
+    {
+        abilityButtonObject.Destroy();
+        abilityManager.RemoveAbility(this);
+    }
+
+    public virtual void UpgradeToNextTier()
+    {
+        if (nextTier)
+        {
+            nextTier.Initialise(abilityManager);
+            DestroyAbility();
+        }
+    }
+
+    public abstract void ApplyTier();
 }
