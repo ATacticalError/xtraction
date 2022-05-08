@@ -24,12 +24,8 @@ public class Player : MonoBehaviour
     public AbilityManager abManager;
     public MapManager mapManager;
 
-    public Text mapManagerStatus;
-
     public void FindMapManager() { 
         mapManager = GameObject.FindGameObjectWithTag("MapManager").GetComponent<MapManager>();
-        if(mapManager)
-            mapManagerStatus.text = "Found";
         mapManager.InitialiseMapManager();
         abManager.SetMapManager(mapManager);
      }

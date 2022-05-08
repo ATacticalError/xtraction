@@ -70,6 +70,10 @@ public class Patrol : MonoBehaviour
     {
         if (!isAlerted && other.gameObject.tag == "Player")
         {
+            if(!canSee) {
+                Debug.Log("Detected player, but whilst cannot see");
+                return;
+            }
             // Change to alert phase.
             isAlerted = true;
             Debug.Log("PlayerDetected");
@@ -123,9 +127,11 @@ public class Patrol : MonoBehaviour
 
     public IEnumerator InvisibleRoutine(float seconds)
     {
+        print("InvisibleRoutine Started");
         canSee = false;
         yield return new WaitForSeconds(seconds);
         canSee = true;
+        print("Invisible Routine Ended");
     }
 
     public void Blindspot(float percentage)

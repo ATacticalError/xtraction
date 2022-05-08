@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078f5f59eabc6f048b7a7e3ea9ca3a59, type: 3}
+  m_Name: Invisibility_T3
+  m_EditorClassIdentifier: 
+  abilityName: Invisibility Tier 3
+  abilityDescription: Become invisible to patrols for 15 seconds
+  upgradeTier: 2
+  abilityButtonPrefab: {fileID: 7657010118905099637, guid: 41291b30a83c9d24190c2b92fa1fa5fd, type: 3}
+  abilityButton: {fileID: 0}
+  abilityButtonText: {fileID: 0}
+  icon: {fileID: 0}
+  model: {fileID: 0}
+  abilityManager: {fileID: 0}

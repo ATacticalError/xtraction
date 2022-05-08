@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class AbilityManager : MonoBehaviour
 {
-    public Button InvisibleButton;
-    public float invisibleSeconds = 5.0f;
-    public Button BlindspotButton;
-    public float blindspotPercentage = 0.2f;
+    public LayoutGroup AbilityTray;
+    [SerializeField]
+    private List<Ability> currentAbilities;
+    //    public Button InvisibleButton;
+    //    public float invisibleSeconds = 5.0f;
+//    public Button BlindspotButton;
+//    public float blindspotPercentage = 0.2f;
     public Button PocketSandButton;
     public int pocketsandMinutes = 1;
     public Button RoadworkButton;
@@ -33,6 +36,12 @@ public class AbilityManager : MonoBehaviour
 
     public void SetMapManager(MapManager manager) { mapManager = manager; }
 
+    public void RemoveAbility(Ability ab) {
+        if(currentAbilities.Contains(ab)){
+            currentAbilities.Remove(ab);
+        }
+    }
+
     public IEnumerator PlayerInvisibilityRoutine(float seconds)
     {
         playerColor.a = playerInvisibleOpacity;
@@ -42,8 +51,13 @@ public class AbilityManager : MonoBehaviour
         playerMat.color = playerColor;
     }
 
+    public void AddAbility(Ability ability)
+    {
+        ability.Initialise(this);
+        currentAbilities.Add(ability);
+    }
 
-    public void InvisibleEvent()
+    public void InvisibleEvent(float invisibleSeconds)
     {
         StartCoroutine(PlayerInvisibilityRoutine(invisibleSeconds));
         if (!mapManager)
@@ -52,7 +66,7 @@ public class AbilityManager : MonoBehaviour
         Debug.Log("Applying Invisiblity");
     }
 
-    public void BlindspotEvent()
+    public void BlindspotEvent(float blindspotPercentage)
     {
         if (!mapManager)
             return;
