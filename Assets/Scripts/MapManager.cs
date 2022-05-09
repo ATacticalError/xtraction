@@ -8,7 +8,13 @@ public class MapManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> patrolPoints = new List<GameObject>();
     [SerializeField]
+    private List<GameObject> clues = new List<GameObject>();
+    [SerializeField]
+    private int currentHotSpot = 0;
+    [SerializeField]
     private List<GameObject> hotSpots = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> foundHotSpots = new List<GameObject>();
     [SerializeField]
     private List<GameObject> disabledPatrolPoints = new List<GameObject>();
 
@@ -25,7 +31,6 @@ public class MapManager : MonoBehaviour
     {
         patrolPoints.AddRange(GameObject.FindGameObjectsWithTag("PatrolPoint"));
         Debug.Log("patrol points found");
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>().SetMapManager(this);
         print(patrolAmount);
         for (int i = patrolAmount; i > 0; i--)
         {
@@ -36,6 +41,28 @@ public class MapManager : MonoBehaviour
             p.SetManager(this);
             patrols.Add(p);
         }
+    }
+
+    public void InititaliseHotSpots()
+    {
+        // First, shuffle the list so it is in a random order
+        for(int i = 0; i < hotSpots.Count; i++) {
+            GameObject hs = hotSpots[i];
+            int randomIndex = Random.Range(0, hotSpots.Count);
+            hotSpots[randomIndex] = hs;
+        }
+    }
+
+    public void GiveClue() {
+
+    }
+
+    public void HotSpotFound(GameObject hotspot) {
+        if(hotSpots.Contains(hotspot))
+            hotSpots.Remove(hotspot);
+        if(!foundHotSpots.Contains(hotspot))
+            foundHotSpots.Add(hotspot);
+        currentHotSpot++;
     }
 
     void Start()

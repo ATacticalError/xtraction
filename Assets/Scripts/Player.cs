@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     float clickTime;
     bool moving;
 
+    public List<Clue> clues = new List<Clue>();
+    public List<GameObject> keys = new List<GameObject>();
+
     public SelectionType selectionType;
     public LayerMask patrolLayermask;
     public LayerMask patrolPointLayermask;
