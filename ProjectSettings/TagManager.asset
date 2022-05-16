@@ -9,6 +9,9 @@ TagManager:
   - AbilityManager
   - MapManager
   - Map
+  - ClueTitle
+  - ClueContent
+  - ClueImage
   layers:
   - Default
   - TransparentFX

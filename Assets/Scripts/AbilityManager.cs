@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AbilityManager : MonoBehaviour
 {
     public LayoutGroup AbilityTray;
+    public int abilityMaxCount = 3;
     [SerializeField]
     private List<Ability> currentAbilities;
     private int rwMinutes;
@@ -28,6 +29,16 @@ public class AbilityManager : MonoBehaviour
 
     public void SetMapManager(MapManager manager) { mapManager = manager; }
 
+    public void AddAbility(Ability ability)
+    {
+        if (currentAbilities.Count >= abilityMaxCount)
+        {
+            //TODO: Show swap ability dialogue
+        }
+        ability.Initialise(this);
+        currentAbilities.Add(ability);
+    }
+
     public void RemoveAbility(Ability ab)
     {
         if (currentAbilities.Contains(ab))
@@ -43,12 +54,6 @@ public class AbilityManager : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         playerColor.a = 1.0f;
         playerMat.color = playerColor;
-    }
-
-    public void AddAbility(Ability ability)
-    {
-        ability.Initialise(this);
-        currentAbilities.Add(ability);
     }
 
     public void InvisibleEvent(float invisibleSeconds)

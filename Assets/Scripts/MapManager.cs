@@ -8,8 +8,6 @@ public class MapManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> patrolPoints = new List<GameObject>();
     [SerializeField]
-    private List<GameObject> hotSpots = new List<GameObject>();
-    [SerializeField]
     private List<GameObject> disabledPatrolPoints = new List<GameObject>();
 
     public int patrolAmount = 3;
@@ -21,11 +19,12 @@ public class MapManager : MonoBehaviour
     [SerializeField]
     private List<Patrol> disabledPatrols = new List<Patrol>();
 
+    public HotspotManager hsManager;
+
     public void InitialiseMapManager()
     {
         patrolPoints.AddRange(GameObject.FindGameObjectsWithTag("PatrolPoint"));
         Debug.Log("patrol points found");
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>().SetMapManager(this);
         print(patrolAmount);
         for (int i = patrolAmount; i > 0; i--)
         {
