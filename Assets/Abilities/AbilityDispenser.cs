@@ -18,7 +18,7 @@ public class AbilityDispenser : MonoBehaviour
         abilityManager = GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityManager>();
         Debug.LogWarning("Looking for ability manager");
     }
-
+    
     public void GiveAbility()
     {
         // if(!abilityManager)

@@ -68,7 +68,7 @@ public class Hotspot : MonoBehaviour
         {
             Debug.Log("Player has passed through hotspot");
             mr.enabled = true;
-            
+            other.GetComponentInParent<AbilityManager>().AddRandomAbility();
             
             if(hsManager) {
                 if(!isDisabled){
