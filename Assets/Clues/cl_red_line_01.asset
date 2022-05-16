@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: cl_red_line_01
   m_EditorClassIdentifier: 
   clueTitle: Hotspot B Clue01
-  clueContent: This is the text clue for hotspotB (Red_line). There should not be
-    an image showing here.
+  clueContent: "Nova,\n\nTo update you on our recent meeting, my team and I have
+    been keepsaking the nullifying ring within the BA building. However, my engineers
+    have found a way to fully contain it. We have escorted it to the Red Line building
+    instead. Please find me if you need anything. \n\nWillow"
   clueImage: {fileID: 0}
   clueUIPrefab: {fileID: 6095933576503064222, guid: 6b1b06e721223c24195b0c6172f8523e, type: 3}

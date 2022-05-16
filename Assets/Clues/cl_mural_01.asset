@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: cl_mural_01
   m_EditorClassIdentifier: 
   clueTitle: Hotspot C Clue01
-  clueContent: This is the text clue for hotspotC (Mural). There should not be an
-    image showing here.
+  clueContent: "Hey,\r\n\r\nI firmly want to apologise for losing the manor book.
+    I know you\u2019ve said that it\u2019s okay but I feel irresponsible for overlooking
+    it. My sister was really mad at me that day\u2026 and I can\u2019t believe she
+    took such an important item and ran. I have a feeling she\u2019s by the usual
+    mural down South-East. Please take a look once you have time, for now I will
+    look after my leg so I leave it up to you."
   clueImage: {fileID: 0}
   clueUIPrefab: {fileID: 6095933576503064222, guid: 6b1b06e721223c24195b0c6172f8523e, type: 3}
