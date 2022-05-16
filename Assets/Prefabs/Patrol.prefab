@@ -281,7 +281,7 @@ MonoBehaviour:
   canSee: 1
   detectionRadius: 4
   isAlerted: 0
-  alertPhaseLength: 5
+  alertPhaseLength: 10
   alertDetectionRadius: 5
   alertPhaseEnded: 0
   raycastPlane: {fileID: 0}

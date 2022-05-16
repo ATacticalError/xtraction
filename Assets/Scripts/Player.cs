@@ -24,20 +24,38 @@ public class Player : MonoBehaviour
     public LayerMask patrolLayermask;
     public LayerMask patrolPointLayermask;
 
+    public GameManager manager;
     public AbilityManager abManager;
     public MapManager mapManager;
-
-    public void FindMapManager() { 
-        mapManager = GameObject.FindGameObjectWithTag("MapManager").GetComponent<MapManager>();
-        mapManager.InitialiseMapManager();
-        abManager.SetMapManager(mapManager);
-     }
+    public HotspotManager hotspotManager;
+    public Inventory inventory;
+    public GameObject startButton;
 
     void Awake()
     {
         targetLocation = transform.position;
         selectionType = SelectionType.Movement;
+        manager = this.GetComponent<GameManager>();
         abManager = this.GetComponent<AbilityManager>();
+        inventory = this.GetComponent<Inventory>();
+    }
+
+    public void InitialiseGame()
+    {
+        GameObject mapGO = GameObject.FindGameObjectWithTag("MapManager");
+
+        mapManager = mapGO.GetComponent<MapManager>();
+        mapManager.InitialiseMapManager();
+        abManager.SetMapManager(mapManager);
+
+        hotspotManager = mapGO.GetComponent<HotspotManager>();
+        hotspotManager.AssignInventory(inventory);
+
+        startButton.SetActive(false);
+    }
+
+    public void AddGameOver() {
+        manager.AddGameOver();
     }
 
     void Update()
@@ -52,8 +70,9 @@ public class Player : MonoBehaviour
 
         if (selectionType == SelectionType.Roadwork)
             SelectRoadwork();
-        if(canMove){
-        float step = moveSpeed * Time.deltaTime;
+        if (canMove)
+        {
+            float step = moveSpeed * Time.deltaTime;
             if (Vector3.Distance(transform.position, targetLocation) > 0.0001f)
                 transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
         }

@@ -87,6 +87,7 @@ public class Patrol : MonoBehaviour
         {
             alertPhaseEnded = false;
             // TODO : link to gameover event
+            other.gameObject.GetComponentInParent<Player>().AddGameOver();
             Debug.Log("Game ended");
         }
     }
