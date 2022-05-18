@@ -8,6 +8,7 @@ public class Clue : ScriptableObject
 {
     public string clueTitle;
     //    public string clueDescription;
+    [TextArea(15,20)]
     public string clueContent;
     public Sprite clueImage;
 

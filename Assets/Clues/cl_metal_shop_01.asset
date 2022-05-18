@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: cl_metal_shop_01
   m_EditorClassIdentifier: 
   clueTitle: Hotspot D Clue01
-  clueContent: This is the text clue for hotspotD (Metal shop). There should not
-    be an image showing here.
+  clueContent: "I\u2019ve left the blue spell potion next to the blue building, between
+    TA and TD. Honestly the potion is quiet intriguing\u2026I wonder what happens
+    if I drank it. Haha just kidding, just kidding\u2026 "
   clueImage: {fileID: 0}
   clueUIPrefab: {fileID: 6095933576503064222, guid: 6b1b06e721223c24195b0c6172f8523e, type: 3}

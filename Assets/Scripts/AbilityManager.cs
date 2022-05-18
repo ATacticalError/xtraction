@@ -39,6 +39,13 @@ public class AbilityManager : MonoBehaviour
         currentAbilities.Add(ability);
     }
 
+    public void AddRandomAbility() {
+        if(TryGetComponent<AbilityDispenser>(out AbilityDispenser ad)) {
+            print("Found ability dispenser");
+            ad.GiveAbility();
+        }
+    }
+
     public void RemoveAbility(Ability ab)
     {
         if (currentAbilities.Contains(ab))

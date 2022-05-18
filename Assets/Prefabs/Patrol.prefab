@@ -276,12 +276,12 @@ MonoBehaviour:
   detectionCol: {fileID: 0}
   pointsInPath: 3
   canMove: 1
-  moveSpeed: 2
+  moveSpeed: 1
   spotLight: {fileID: 10970059422494598}
   canSee: 1
-  detectionRadius: 4
+  detectionRadius: 3
   isAlerted: 0
-  alertPhaseLength: 10
+  alertPhaseLength: 20
   alertDetectionRadius: 5
   alertPhaseEnded: 0
   raycastPlane: {fileID: 0}

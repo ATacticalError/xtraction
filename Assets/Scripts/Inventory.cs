@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
     public GameObject inventoryUI;
     public GameObject cluePanel;
     public List<Clue> clues = new List<Clue>();
-    
+
     public void AddKey() {
         GetComponent<GameManager>().AddKey();
     }
