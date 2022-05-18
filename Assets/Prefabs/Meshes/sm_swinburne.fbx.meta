@@ -3,7 +3,72 @@ guid: 7957977db2f881046a6490515209eaa1
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: areas_pedestrian
+    second: {fileID: 2100000, guid: 75523c994c1dcef4b99cc6d260a08f3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paths_cycleway
+    second: {fileID: 2100000, guid: 588d6a05331892943a7c2409148dfbe8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paths_footway
+    second: {fileID: 2100000, guid: e4213867a873eda43807c2a254df8933, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paths_steps
+    second: {fileID: 2100000, guid: 22a5e99c232b1c2499ce053303ec251a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: railways
+    second: {fileID: 2100000, guid: 89efe0bba80ca204394df8fe40a109e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roads_pedestrian
+    second: {fileID: 2100000, guid: 65f008a29f05246469f0d734583956d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roads_primary
+    second: {fileID: 2100000, guid: 1f862eb9c3613a847bc9dfb1f1aee03c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roads_residential
+    second: {fileID: 2100000, guid: fcca0b4a07829e842a71bc226d124150, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roads_secondary
+    second: {fileID: 2100000, guid: cbee718b396984641968475466d0d469, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roads_service
+    second: {fileID: 2100000, guid: 96dcd225486557c4c9cb86aa1cea8cab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roads_unclassified
+    second: {fileID: 2100000, guid: 038701c8fb10f4a4995cf93af5ea09eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof
+    second: {fileID: 2100000, guid: 68d3105027890c64b90424949892fc38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall
+    second: {fileID: 2100000, guid: c15d4a7ed0d878541ba6882fcc3826ec, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -85,7 +150,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.02
+    globalScale: 2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
