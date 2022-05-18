@@ -3,112 +3,114 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Dialogue : MonoBehaviour
-{
-    public int curLine;
-
-    public string[] names;
-
-    [TextArea(3, 10)]
-    public string[] sentences;
-
-    public Sprite[] charSprites;
-
-    public GameObject[] turnOnObj;
-
-    public GameObject turnOnObjAtEnd;
-    public GameObject turnOffObjAtEnd;
-
-    public Animator anim;
-    public Image charImage;
-    public Text nameText;
-    public Text dialogueText;
-
-    public GameObject playerCanvas;
-//    public PlayerManager playerMan;
-
-    bool alreadyTurnedOff;
-
-    void OnEnable()
+    public class Dialogue : MonoBehaviour
     {
-        alreadyTurnedOff = false;
+        public int curLine;
 
-//        playerMan = GameObject.FindWithTag("Player").GetComponent<PlayerManager>();
+        public string[] names;
 
-//        playerCanv = playerMan.playerCanvas;
+        [TextArea(3, 10)]
+        public string[] sentences;
 
-        
-//        playerCanvas.SetActive(false);
+        public Sprite[] charSprites;
 
-        anim.SetTrigger("On");
+        public GameObject[] turnOnObj;
 
-        curLine = 0;
-        dialogueText.text = sentences[curLine];
-        nameText.text = names[curLine];
-        charImage.sprite = charSprites[curLine];
-    }
+        public GameObject turnOnObjAtEnd;
+        public GameObject turnOffObjAtEnd;
 
-    void LateUpdate()
-    {
-        //stop player from moving
-//        playerMan.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-//        playerMan.gameObject.GetComponent<Animator>().SetBool("Moving", false);
-    }
+        public Animator anim;
+        public Image charImage;
+        public Text nameText;
+        public Text dialogueText;
 
-    public void Click()
-    {
-        print("Clicked");
-        curLine++;
-        if (curLine < sentences.Length)
+        public GameObject playerCanvas;
+        //    public PlayerManager playerMan;
+
+        bool alreadyTurnedOff;
+
+        void OnEnable()
         {
+            Initialise();
+        }
 
+        public void Initialise() 
+        {
+            alreadyTurnedOff = false;
+
+            //        playerMan = GameObject.FindWithTag("Player").GetComponent<PlayerManager>();
+            //        playerCanv = playerMan.playerCanvas;
+            //        playerCanvas.SetActive(false);
+
+            anim.SetTrigger("On");
+
+            curLine = 0;
             dialogueText.text = sentences[curLine];
+            nameText.text = names[curLine];
+            charImage.sprite = charSprites[curLine];
+        }
 
-            if (charSprites[curLine] != null)
+        void LateUpdate()
+        {
+            //stop player from moving
+            //        playerMan.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            //        playerMan.gameObject.GetComponent<Animator>().SetBool("Moving", false);
+        }
+
+        public void Click()
+        {
+            print("Clicked");
+            curLine++;
+            if (curLine < sentences.Length)
             {
-                charImage.sprite = charSprites[curLine];
-                anim.SetTrigger("ChangeSprite");
+
+                dialogueText.text = sentences[curLine];
+
+                if (charSprites[curLine] != null)
+                {
+                    charImage.sprite = charSprites[curLine];
+                    anim.SetTrigger("ChangeSprite");
+                }
+                else
+                {
+                    anim.SetTrigger("Click");
+                }
+
+                nameText.text = names[curLine];
+
+                if (turnOnObj[curLine] != null)
+                {
+                    turnOnObj[curLine].SetActive(true);
+                }
             }
             else
             {
-                anim.SetTrigger("Click");
-            }
+                if (turnOnObjAtEnd != null)
+                {
+                    turnOnObjAtEnd.SetActive(true);
+                }
+                if (turnOffObjAtEnd != null)
+                {
+                    turnOffObjAtEnd.SetActive(false);
+                }
 
-            nameText.text = names[curLine];
+                if (!alreadyTurnedOff)
+                {
+                    //END DIALOGUE
+                    anim.SetTrigger("Off");
+                    alreadyTurnedOff = true;
 
-            if(turnOnObj[curLine] != null)
-            {
-                turnOnObj[curLine].SetActive(true);
+                    //call Off() after 0.33 seconds to leave room for the animation to finish
+                    Invoke("Off", 0.33f);
+                }
             }
         }
-        else
+
+        public void Off()
         {
-            if(turnOnObjAtEnd != null)
-            {
-                turnOnObjAtEnd.SetActive(true);
-            }
-            if (turnOffObjAtEnd != null)
-            {
-                turnOffObjAtEnd.SetActive(false);
-            }
-
-            if (!alreadyTurnedOff)
-            {
-                //END DIALOGUE
-                anim.SetTrigger("Off");
-                alreadyTurnedOff = true;
-
-                //call Off() after 0.33 seconds to leave room for the animation to finish
-                Invoke("Off", 0.33f);
-            }
+            //change this to allow player movement
+            //        playerCanvas.SetActive(true);
+            //        playerMan.move.dashing = false;
+            gameObject.SetActive(false);
         }
     }
-
-    public void Off()
-    {
-        //change this to allow player movement
-//        playerCanvas.SetActive(true);
-//        playerMan.move.dashing = false;
-        gameObject.SetActive(false);
-    }
-}
