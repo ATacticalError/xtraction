@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: T1_Invisibility
   m_EditorClassIdentifier: 
   abilityName: Invisibility Tier 1
-  abilityDescription: Become invisible to patrols for 5 seconds
+  abilityDescription: 'Become invisible to patrols for 5 seconds.
+
+    Tier 1'
   upgradeTier: 0
   abilityManager: {fileID: 0}
   abilityButtonPrefab: {fileID: 7657010118905099637, guid: 41291b30a83c9d24190c2b92fa1fa5fd, type: 3}
@@ -21,6 +23,6 @@ MonoBehaviour:
   abilityButton: {fileID: 0}
   abilityButtonText: {fileID: 0}
   icon: {fileID: 0}
-  model: {fileID: 0}
+  model: {fileID: 919132149155446097, guid: 655225dee20b9984f9ff169d3d8ab318, type: 3}
   singleUse: 0
   nextTier: {fileID: 11400000, guid: 132614f9f04de454e8fa52da6de8dc84, type: 2}

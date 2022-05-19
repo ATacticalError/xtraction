@@ -12,6 +12,8 @@ TagManager:
   - ClueTitle
   - ClueContent
   - ClueImage
+  - DialogueManager
+  - AbilityHolder
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Patrol
   - PointOfInterest
   - PatrolPoint
-  - 
+  - AbilityIcon
   - 
   - 
   - 

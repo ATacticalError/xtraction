@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public abstract class Ability : ScriptableObject
 {
     public string abilityName = "AbilityName";
+    [TextArea(15,20)]
     public string abilityDescription = "AbilityDescription";
     public UpgradeTier upgradeTier;
 
@@ -21,6 +22,7 @@ public abstract class Ability : ScriptableObject
 
     public Ability nextTier;
 
+    private GameObject iconSlot;
 
     public virtual void Initialise(AbilityManager ab)
     {
@@ -34,8 +36,24 @@ public abstract class Ability : ScriptableObject
             return;
         }
         abilityButtonText.text = abilityName;
+        UnityEditor.Events.UnityEventTools.AddPersistentListener(abilityButton.onClick, TriggerAbility);
         abilityButton.onClick.AddListener(TriggerAbility);
         ApplyTier();
+        CreateButtonIcon(ab);
+    }
+
+    public virtual void CreateButtonIcon(AbilityManager ab){
+        // Get ability icon slot from ability manager
+        GameObject iconSlot = ab.GetAbilityIconSlot();
+        // Instatiate model inside ability holder
+        GameObject abilityModel = GameObject.Instantiate(model, iconSlot.transform.GetChild(1));
+        // Set layer to AbilityIcon
+        foreach(Transform t in abilityModel.GetComponentsInChildren<Transform>(true)) {
+            t.gameObject.layer = LayerMask.NameToLayer("AbilityIcon");
+        }
+        // Change rawimage to render texture from camera
+        abilityButtonObject.GetComponent<RawImage>().texture = iconSlot.transform.GetChild(0).GetComponent<Camera>().targetTexture;
+        // Change ability background to rarity
     }
 
     public virtual void TriggerAbility()

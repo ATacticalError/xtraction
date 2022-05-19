@@ -965,6 +965,7 @@ MonoBehaviour:
   turnOnObj:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   turnOnObjAtEnd: {fileID: 0}
   turnOffObjAtEnd: {fileID: 0}
   anim: {fileID: 7710855593555832527}

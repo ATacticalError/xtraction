@@ -956,13 +956,14 @@ MonoBehaviour:
   - Silas
   sentences:
   - "The heart of their base\u2026 the base centre. "
-  - Such beautiful architect for such a rebellious group.
+  - Such beautiful architecture for such a rebellious group.
   - "Why can\u2019t they see what I could achieve with the extraction."
   charSprites:
   - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   turnOnObj:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   turnOnObjAtEnd: {fileID: 0}

@@ -15,9 +15,12 @@ MonoBehaviour:
   abilityName: Invisibility Tier 3
   abilityDescription: Become invisible to patrols for 15 seconds
   upgradeTier: 2
+  abilityManager: {fileID: 0}
   abilityButtonPrefab: {fileID: 7657010118905099637, guid: 41291b30a83c9d24190c2b92fa1fa5fd, type: 3}
+  abilityButtonObject: {fileID: 0}
   abilityButton: {fileID: 0}
   abilityButtonText: {fileID: 0}
   icon: {fileID: 0}
-  model: {fileID: 0}
-  abilityManager: {fileID: 0}
+  model: {fileID: 919132149155446097, guid: 655225dee20b9984f9ff169d3d8ab318, type: 3}
+  singleUse: 0
+  nextTier: {fileID: 0}

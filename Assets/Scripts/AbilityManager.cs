@@ -19,12 +19,24 @@ public class AbilityManager : MonoBehaviour
     public float playerInvisibleOpacity = 0.75f;
     private Color playerColor;
 
+    public GameObject[] abilityISlot;
+    private int abilityISlotCounter = 0;
+
     void Awake()
     {
         player = this.GetComponent<Player>();
         playerColor = playerMat.color;
         playerColor.a = 1.0f;
         playerMat.color = playerColor;
+    }
+
+    public GameObject GetAbilityIconSlot(){
+        GameObject aIcon = abilityISlot[abilityISlotCounter];
+        if(abilityISlotCounter < abilityISlot.Length)
+            abilityISlotCounter++;
+        else
+            abilityISlotCounter = 0;
+        return aIcon;
     }
 
     public void SetMapManager(MapManager manager) { mapManager = manager; }

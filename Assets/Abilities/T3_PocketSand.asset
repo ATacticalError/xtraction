@@ -15,13 +15,12 @@ MonoBehaviour:
   abilityName: PocketSand Tier 3
   abilityDescription: Stuns patrols in place for 3 minutes
   upgradeTier: 2
+  abilityManager: {fileID: 0}
   abilityButtonPrefab: {fileID: 7657010118905099637, guid: 41291b30a83c9d24190c2b92fa1fa5fd, type: 3}
   abilityButtonObject: {fileID: 0}
   abilityButton: {fileID: 0}
   abilityButtonText: {fileID: 0}
   icon: {fileID: 0}
-  model: {fileID: 0}
-  abilityManager: {fileID: 0}
+  model: {fileID: 919132149155446097, guid: 84d6d998e7d5cf74c9ab1f97c3c3c3c4, type: 3}
   singleUse: 0
-  maxStack: 3
-  currentCount: 1
+  nextTier: {fileID: 0}
