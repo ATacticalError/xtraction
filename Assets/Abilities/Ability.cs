@@ -22,7 +22,7 @@ public abstract class Ability : ScriptableObject
 
     public Ability nextTier;
 
-    private GameObject iconSlot;
+    public AbilityIconSlot iconSlot;
 
     public virtual void Initialise(AbilityManager ab)
     {
@@ -37,23 +37,16 @@ public abstract class Ability : ScriptableObject
         }
         abilityButtonText.text = abilityName;
         UnityEditor.Events.UnityEventTools.AddPersistentListener(abilityButton.onClick, TriggerAbility);
-        abilityButton.onClick.AddListener(TriggerAbility);
+        // abilityButton.onClick.AddListener(TriggerAbility);
         ApplyTier();
         CreateButtonIcon(ab);
     }
 
     public virtual void CreateButtonIcon(AbilityManager ab){
         // Get ability icon slot from ability manager
-        GameObject iconSlot = ab.GetAbilityIconSlot();
-        // Instatiate model inside ability holder
-        GameObject abilityModel = GameObject.Instantiate(model, iconSlot.transform.GetChild(1));
-        // Set layer to AbilityIcon
-        foreach(Transform t in abilityModel.GetComponentsInChildren<Transform>(true)) {
-            t.gameObject.layer = LayerMask.NameToLayer("AbilityIcon");
-        }
-        // Change rawimage to render texture from camera
-        abilityButtonObject.GetComponent<RawImage>().texture = iconSlot.transform.GetChild(0).GetComponent<Camera>().targetTexture;
-        // Change ability background to rarity
+        iconSlot = ab.ReserveAbilityIconSlot();
+        iconSlot.AddIcon(model, upgradeTier);
+        abilityButtonObject.GetComponent<RawImage>().texture = iconSlot.cam.targetTexture;
     }
 
     public virtual void TriggerAbility()
@@ -61,6 +54,8 @@ public abstract class Ability : ScriptableObject
         if (singleUse)
         {
             DestroyAbility();
+            iconSlot.cam.targetTexture.Release();
+            abilityManager.ClearAbilityIconSlot(iconSlot);
         }
     }
 

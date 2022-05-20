@@ -19,8 +19,8 @@ public class AbilityManager : MonoBehaviour
     public float playerInvisibleOpacity = 0.75f;
     private Color playerColor;
 
-    public GameObject[] abilityISlot;
-    private int abilityISlotCounter = 0;
+    public AbilityIconSlot[] iconSlots;
+    public List<AbilityIconSlot> occupiedIconSlots = new List<AbilityIconSlot>();
 
     void Awake()
     {
@@ -30,13 +30,32 @@ public class AbilityManager : MonoBehaviour
         playerMat.color = playerColor;
     }
 
-    public GameObject GetAbilityIconSlot(){
-        GameObject aIcon = abilityISlot[abilityISlotCounter];
-        if(abilityISlotCounter < abilityISlot.Length)
-            abilityISlotCounter++;
-        else
-            abilityISlotCounter = 0;
+    public AbilityIconSlot ReserveAbilityIconSlot()
+    {
+        AbilityIconSlot aIcon = iconSlots[0];
+        for (int s = 0; s < iconSlots.Length; s++)
+        {
+            if (!occupiedIconSlots.Contains(iconSlots[s]))
+            {
+                aIcon = iconSlots[s];
+                occupiedIconSlots.Add(iconSlots[s]);
+                return aIcon;
+            }
+        }
+        Debug.LogWarning("Could not find an empty AbilityIconSlot to assign");
         return aIcon;
+    }
+
+    public void ClearAbilityIconSlot(AbilityIconSlot slot)
+    {
+        if (occupiedIconSlots.Contains(slot))
+        {
+            slot.ClearIcon();
+            occupiedIconSlots.Remove(slot);
+            Debug.Log("Removing " + slot + "from occupied icon slots");
+        } else {
+            Debug.LogWarning(slot + "Not in occupied icon slots");
+        }
     }
 
     public void SetMapManager(MapManager manager) { mapManager = manager; }
@@ -46,13 +65,17 @@ public class AbilityManager : MonoBehaviour
         if (currentAbilities.Count >= abilityMaxCount)
         {
             //TODO: Show swap ability dialogue
+            Debug.Log("Reached max amount of abilities, should add swapping dialogue");
+            return;
         }
         ability.Initialise(this);
         currentAbilities.Add(ability);
     }
 
-    public void AddRandomAbility() {
-        if(TryGetComponent<AbilityDispenser>(out AbilityDispenser ad)) {
+    public void AddRandomAbility()
+    {
+        if (TryGetComponent<AbilityDispenser>(out AbilityDispenser ad))
+        {
             print("Found ability dispenser");
             ad.GiveAbility();
         }

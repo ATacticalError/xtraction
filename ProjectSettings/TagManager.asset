@@ -14,6 +14,7 @@ TagManager:
   - ClueImage
   - DialogueManager
   - AbilityHolder
+  - AbilityBase
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,7 @@ MonoBehaviour:
   abilityButton: {fileID: 0}
   abilityButtonText: {fileID: 0}
   icon: {fileID: 0}
-  model: {fileID: 919132149155446097, guid: 655225dee20b9984f9ff169d3d8ab318, type: 3}
+  model: {fileID: 4486067355756774302, guid: 007d47b2c69e5e14fb41e4f84a7e21cc, type: 3}
   singleUse: 0
   nextTier: {fileID: 11400000, guid: 88ec53f8b7d17694392d84506405a3c6, type: 2}
+  iconSlot: {fileID: 0}
