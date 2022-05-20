@@ -21,8 +21,11 @@ public class MapManager : MonoBehaviour
 
     public HotspotManager hsManager;
 
-    public void InitialiseMapManager()
+    public Player player;
+
+    public void InitialiseMapManager(Player pl)
     {
+        player = pl;
         patrolPoints.AddRange(GameObject.FindGameObjectsWithTag("PatrolPoint"));
         Debug.Log("patrol points found");
         print(patrolAmount);
@@ -77,6 +80,11 @@ public class MapManager : MonoBehaviour
         disabledPatrols.Add(patrol);
         patrols.Remove(patrol);
         patrol.gameObject.SetActive(false);
+    }
+
+    public void PlayerSpotted(bool detected, float alertPhaseLength)
+    {
+        player.Spotted(detected, alertPhaseLength);
     }
 
     private IEnumerator RoadworkRoutine(float minutes, GameObject patrolPoint)

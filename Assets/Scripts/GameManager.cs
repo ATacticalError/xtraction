@@ -17,10 +17,12 @@ public class GameManager : MonoBehaviour
     public MapManager mapManager;
     public float patrolSpeedMultiplier;
 
+
     void Update()
     {
-        if(mapManager) {
-            
+        if (mapManager)
+        {
+
         }
     }
 

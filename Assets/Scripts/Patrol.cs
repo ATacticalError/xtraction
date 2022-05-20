@@ -97,12 +97,14 @@ public class Patrol : MonoBehaviour
         isAlerted = true;
         canMove = false;
         detectionCol.radius = alertDetectionRadius;
+        manager.PlayerSpotted(isAlerted, alertPhaseLength);
         // TODO : Add Alert effects
         yield return new WaitForSeconds(seconds);
         alertPhaseEnded = true;
         detectionCol.radius = detectionRadius;
         isAlerted = false;
         canMove = true;
+        manager.PlayerSpotted(isAlerted, alertPhaseLength);
     }
 
     void Pathing()

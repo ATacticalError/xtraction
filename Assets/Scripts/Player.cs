@@ -31,6 +31,12 @@ public class Player : MonoBehaviour
     public Inventory inventory;
     public GameObject startButton;
 
+    public GameObject alertOverlay;
+    public Text alertTimerText;
+    public Animator alertAnimator;
+    public float alertTimer = 30;
+    public bool alertCountdown = false;
+
     void Awake()
     {
         targetLocation = transform.position;
@@ -38,6 +44,7 @@ public class Player : MonoBehaviour
         manager = this.GetComponent<GameManager>();
         abManager = this.GetComponent<AbilityManager>();
         inventory = this.GetComponent<Inventory>();
+        alertOverlay.SetActive(false);
     }
 
     public void InitialiseGame()
@@ -45,7 +52,7 @@ public class Player : MonoBehaviour
         GameObject mapGO = GameObject.FindGameObjectWithTag("MapManager");
 
         mapManager = mapGO.GetComponent<MapManager>();
-        mapManager.InitialiseMapManager();
+        mapManager.InitialiseMapManager(this);
         abManager.SetMapManager(mapManager);
 
         hotspotManager = mapGO.GetComponent<HotspotManager>();
@@ -54,7 +61,27 @@ public class Player : MonoBehaviour
         startButton.SetActive(false);
     }
 
-    public void AddGameOver() {
+    public void Spotted(bool detected, float alertPhaseLength)
+    {
+        if(detected) {
+            alertOverlay.SetActive(true);
+            alertAnimator.SetTrigger("On");
+            alertTimer = alertPhaseLength;
+            Debug.Log(alertPhaseLength);
+            alertCountdown = true;
+        } else {
+            alertAnimator.SetTrigger("Off");
+            Invoke("AlertOff", 1);
+        }
+    }
+
+    public void AlertOff() {
+        alertCountdown = false;
+        alertOverlay.SetActive(false);
+    }
+
+    public void AddGameOver()
+    {
         manager.AddGameOver();
     }
 
@@ -75,6 +102,13 @@ public class Player : MonoBehaviour
             float step = moveSpeed * Time.deltaTime;
             if (Vector3.Distance(transform.position, targetLocation) > 0.0001f)
                 transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
+        }
+        if(alertCountdown) {
+            alertTimer -= Time.deltaTime;
+            if(alertTimer <= 0) {
+                alertTimer = 0;
+            }
+            alertTimerText.text = ((int)alertTimer).ToString();
         }
     }
 
