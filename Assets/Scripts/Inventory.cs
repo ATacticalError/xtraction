@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    public GameObject canvas;
     public GameObject inventoryUI;
     public GameObject cluePanel;
     public List<Clue> clues = new List<Clue>();
 
+    public GameManager gameManager;
+
     public void AddKey() {
-        GetComponent<GameManager>().AddKey();
+        gameManager.AddKey();
     }
 
     public void AddClue(Clue clue)
@@ -21,9 +24,15 @@ public class Inventory : MonoBehaviour
             return;
         }
         Debug.Log("clue: " + clue.clueTitle);
-        clue.Initialise(cluePanel, inventoryUI);
+        clue.Initialise(cluePanel, inventoryUI, canvas);
         clues.Add(clue);
         Debug.Log("Clue added");
+        gameManager.AddClue();
+    }
+
+    public void SpawnDialogue(GameObject dialogue) {
+        GameObject d = GameObject.Instantiate(dialogue, canvas.transform);
+        d.SetActive(true);
     }
 
     public void OpenInventoryEvent()

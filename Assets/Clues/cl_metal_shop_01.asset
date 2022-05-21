@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: cl_metal_shop_01
   m_EditorClassIdentifier: 
   clueTitle: Hotspot D Clue01
-  clueContent: "I\u2019ve left the blue spell potion next to the blue building, between
-    TA and TD. Honestly the potion is quiet intriguing\u2026I wonder what happens
-    if I drank it. Haha just kidding, just kidding\u2026 "
+  clueContent: "I\u2019ve left the blue orb next to the blue building, between TA
+    and TD. Honestly the orb is quite intriguing. What colours installed inside.
+    \r\n"
   clueImage: {fileID: 0}
+  clueDialogue: {fileID: 7710855593555832525, guid: 9ce3eedd714fa86429b28103ebfc3a71, type: 3}
   clueUIPrefab: {fileID: 6095933576503064222, guid: 6b1b06e721223c24195b0c6172f8523e, type: 3}

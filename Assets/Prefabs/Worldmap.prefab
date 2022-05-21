@@ -107,6 +107,7 @@ MonoBehaviour:
   patrols: []
   disabledPatrols: []
   hsManager: {fileID: 8973386262241546303}
+  player: {fileID: 0}
 --- !u!114 &8973386262241546303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +349,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8512943686861253861}
     m_Modifications:
+    - target: {fileID: 4487940838186287286, guid: 2874fc02ecf54ca449043943e0eef88c, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 7710855593555832525, guid: 8939eb4aed70dfd4e8e9fb3ecf97752a, type: 3}
     - target: {fileID: 4487940838186287286, guid: 2874fc02ecf54ca449043943e0eef88c, type: 3}
       propertyPath: areaIndicator
       value: 
@@ -764,6 +769,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8512943686861253861}
     m_Modifications:
+    - target: {fileID: 4487940838186287286, guid: 2874fc02ecf54ca449043943e0eef88c, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 7710855593555832525, guid: 9e3d89fd84d8d094b8736d4ddfe235a7, type: 3}
     - target: {fileID: 4487940838186287286, guid: 2874fc02ecf54ca449043943e0eef88c, type: 3}
       propertyPath: clues.Array.size
       value: 2
@@ -1371,6 +1380,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8512943686861253861}
     m_Modifications:
     - target: {fileID: 4487940838186287286, guid: 2874fc02ecf54ca449043943e0eef88c, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 7710855593555832525, guid: 789a941659d9b8642b7ad26085258cd3, type: 3}
+    - target: {fileID: 4487940838186287286, guid: 2874fc02ecf54ca449043943e0eef88c, type: 3}
       propertyPath: areaIndicator
       value: 
       objectReference: {fileID: 2000502858832908628}
@@ -1803,6 +1816,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8512943686861253861}
     m_Modifications:
+    - target: {fileID: 4487940838186287286, guid: 2874fc02ecf54ca449043943e0eef88c, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 7710855593555832525, guid: 37d9f1e9c65e3484186d731dbea5f5ae, type: 3}
     - target: {fileID: 4487940838186287286, guid: 2874fc02ecf54ca449043943e0eef88c, type: 3}
       propertyPath: areaIndicator
       value: 

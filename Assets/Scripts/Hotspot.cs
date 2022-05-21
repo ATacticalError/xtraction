@@ -10,6 +10,7 @@ public class Hotspot : MonoBehaviour
     private MeshRenderer mr;
     public List<Clue> clues = new List<Clue>();
     public List<Clue> foundClues = new List<Clue>();
+    public GameObject dialogue;
 
     public HotspotManager hsManager;
 
@@ -72,7 +73,7 @@ public class Hotspot : MonoBehaviour
             Debug.Log("Player has passed through hotspot");
             mr.enabled = true;
             other.GetComponentInParent<AbilityManager>().AddRandomAbility();
-
+            other.GetComponentInParent<Inventory>().SpawnDialogue(dialogue);
             if (hsManager)
             {
                 if (!isDisabled)

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d6ab59be900c64e822b2954f99fe11, type: 3}
   m_Name: T3_Assassination
   m_EditorClassIdentifier: 
-  abilityName: Assassination
+  abilityName: Assassination III
   abilityDescription: Take out a patrol group - one time use
   upgradeTier: 2
   abilityManager: {fileID: 0}

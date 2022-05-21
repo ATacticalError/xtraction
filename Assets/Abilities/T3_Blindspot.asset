@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91566d4f590cfe1478bad60d008f2ee2, type: 3}
   m_Name: T3_Blindspot
   m_EditorClassIdentifier: 
-  abilityName: Blindspot T3
+  abilityName: Blindspot III
   abilityDescription: Decrease patrols sight by 60%
   upgradeTier: 2
   abilityManager: {fileID: 0}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a88e438d2477ca4fbe75d21a4475780, type: 3}
   m_Name: T1_PocketSand
   m_EditorClassIdentifier: 
-  abilityName: PocketSand Tier 1
+  abilityName: PocketSand I
   abilityDescription: 'Stuns patrols in place for 1 minute
 
     Tier 1'

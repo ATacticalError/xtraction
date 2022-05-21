@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5697405677eea004d86a5e51280d6eb8, type: 3}
   m_Name: T1_Roadwork
   m_EditorClassIdentifier: 
-  abilityName: Roadwork T1
+  abilityName: Roadwork I
   abilityDescription: 'Blocks a path of user choice for 1 minute
 
     Tier 1'

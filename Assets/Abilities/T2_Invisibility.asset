@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078f5f59eabc6f048b7a7e3ea9ca3a59, type: 3}
   m_Name: T2_Invisibility
   m_EditorClassIdentifier: 
-  abilityName: Invisibility Tier 2
+  abilityName: Invisibility II
   abilityDescription: Become invisible to patrols for 10 seconds
   upgradeTier: 1
   abilityManager: {fileID: 0}

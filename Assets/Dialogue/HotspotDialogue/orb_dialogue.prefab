@@ -676,7 +676,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 7710855593555832527}
   - component: {fileID: 7710855593555832526}
   m_Layer: 16
-  m_Name: cheese_grater_01_dialogue
+  m_Name: orb_dialogue
   m_TagString: DialogueManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -953,17 +953,13 @@ MonoBehaviour:
   names:
   - Silas
   - Silas
-  - Silas
   sentences:
-  - "The heart of their base\u2026 the base centre. "
-  - Such beautiful architecture for such a rebellious group.
-  - "Why can\u2019t they see what I could achieve with the extraction."
+  - Soon you will glow once again.
+  - ... Soon.
   charSprites:
-  - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
-  - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
-  - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
+  - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
+  - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
   turnOnObj:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   turnOnObjAtEnd: {fileID: 0}

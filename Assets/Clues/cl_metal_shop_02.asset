@@ -15,4 +15,5 @@ MonoBehaviour:
   clueTitle: Hotspot D Clue02
   clueContent: 
   clueImage: {fileID: 21300000, guid: d5205bda7f17e2c4ea478a886b7ec18b, type: 3}
+  clueDialogue: {fileID: 7710855593555832525, guid: 2d756e1f08baa44449523957bfc4367c, type: 3}
   clueUIPrefab: {fileID: 6095933576503064222, guid: 6b1b06e721223c24195b0c6172f8523e, type: 3}

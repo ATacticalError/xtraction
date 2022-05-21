@@ -15,7 +15,6 @@ public class HotspotManager : MonoBehaviour
         InititaliseHotSpots();
     }
 
-
     public void AssignInventory(Inventory i)
     {
         inventory = i;

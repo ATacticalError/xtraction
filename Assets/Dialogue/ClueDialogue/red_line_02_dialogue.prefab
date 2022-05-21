@@ -676,7 +676,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 7710855593555832527}
   - component: {fileID: 7710855593555832526}
   m_Layer: 16
-  m_Name: cheese_grater_02_dialogue
+  m_Name: red_line_02_dialogue
   m_TagString: DialogueManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -953,17 +953,13 @@ MonoBehaviour:
   names:
   - Silas
   - Silas
-  - Silas
   sentences:
-  - Vigilance isn't going to stop me,
-  - 'I''m coming for what''s mine. '
-  - What on earth is this ...Cheese grater?
+  - I have to applaud their photography skills.
+  - Too bad they're thieves.
   charSprites:
-  - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
-  - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
-  - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
+  - {fileID: 21300000, guid: 24b36949706c82e4d88b73b0075443ac, type: 3}
+  - {fileID: 21300000, guid: 24b36949706c82e4d88b73b0075443ac, type: 3}
   turnOnObj:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   turnOnObjAtEnd: {fileID: 0}

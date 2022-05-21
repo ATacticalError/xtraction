@@ -8,9 +8,10 @@ public class Clue : ScriptableObject
 {
     public string clueTitle;
     //    public string clueDescription;
-    [TextArea(15,20)]
+    [TextArea(15, 20)]
     public string clueContent;
     public Sprite clueImage;
+    public GameObject clueDialogue;
 
     public GameObject clueUIPrefab;
     private GameObject clueGO;
@@ -19,7 +20,14 @@ public class Clue : ScriptableObject
     private Text uiContent;
     private Image uiImage;
 
-    public void Initialise(GameObject cluePanel, GameObject inventoryUI)
+
+    public void Initialise(GameObject cluePanel, GameObject inventoryUI, GameObject canvas)
+    {
+        InitialiseClueDialogue(canvas);
+        InitialiseClueObject(cluePanel, inventoryUI);
+    }
+
+    public void InitialiseClueObject(GameObject cluePanel, GameObject inventoryUI)
     {
         inventoryUI.SetActive(true);
         clueGO = GameObject.Instantiate(clueUIPrefab, cluePanel.transform);
@@ -45,6 +53,15 @@ public class Clue : ScriptableObject
         {
             uiImage.gameObject.SetActive(false);
         }
+    }
+
+    public void InitialiseClueDialogue(GameObject canvas) {
+        if(!canvas || !clueDialogue) {
+            Debug.LogWarning("Canvas or clue dialogue are not assigned to this clue!");
+            return;
+        }
+        GameObject dialogue = GameObject.Instantiate(clueDialogue, canvas.transform);
+        dialogue.SetActive(true);
     }
 
     Transform FindChildInTag(GameObject root, string tag)

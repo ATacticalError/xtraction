@@ -15,7 +15,8 @@ MonoBehaviour:
   clueTitle: Hotspot A Clue01
   clueContent: "I\u2019m hoping this note gets to HQ. After the encounter with Silas,
     we must be more vigilant. Some think that he\u2019ll be back to take the four
-    key components again. The Bolting Rod was kept next to the Cheese Grater. If
-    you look up, you should also see the glass tunnel."
+    key components again. Giggles' Bolting Rod was kept next to the Cheese Grater.
+    If you look up, you should also see the glass tunnel."
   clueImage: {fileID: 0}
+  clueDialogue: {fileID: 7710855593555832525, guid: 53cb076774b3484418671805af316d4a, type: 3}
   clueUIPrefab: {fileID: 6095933576503064222, guid: 6b1b06e721223c24195b0c6172f8523e, type: 3}

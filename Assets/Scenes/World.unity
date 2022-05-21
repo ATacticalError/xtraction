@@ -914,6 +914,8 @@ RectTransform:
   - {fileID: 475501084}
   - {fileID: 1391020461}
   - {fileID: 90989729}
+  - {fileID: 1387156774}
+  - {fileID: 370894837}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1143,6 +1145,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370525521}
   m_CullTransparentMesh: 1
+--- !u!1 &370894836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370894837}
+  - component: {fileID: 370894838}
+  m_Layer: 5
+  m_Name: AssassinateOverlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &370894837
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370894836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1183400926}
+  m_Father: {fileID: 230672827}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &370894838
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370894836}
+  m_CullTransparentMesh: 1
 --- !u!1 &475501083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1299,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475501083}
   m_CullTransparentMesh: 1
+--- !u!1 &556957650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556957651}
+  - component: {fileID: 556957653}
+  - component: {fileID: 556957652}
+  - component: {fileID: 556957654}
+  m_Layer: 5
+  m_Name: RoadworkText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &556957651
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556957650}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1387156774}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015259, y: 354}
+  m_SizeDelta: {x: 512.849, y: 317.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &556957652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556957650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 218956a5c2a6e42d6a60afccf80b002b, type: 3}
+    m_FontSize: 42
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 120
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Tap a patrol checkpoint to disable it for some time!
+--- !u!222 &556957653
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556957650}
+  m_CullTransparentMesh: 1
+--- !u!114 &556957654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556957650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &590605398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1626,7 +1768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2364,6 +2506,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166405433}
   m_CullTransparentMesh: 1
+--- !u!1 &1183400925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1183400926}
+  - component: {fileID: 1183400929}
+  - component: {fileID: 1183400928}
+  - component: {fileID: 1183400927}
+  m_Layer: 5
+  m_Name: RoadworkText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1183400926
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183400925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 370894837}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015259, y: 354}
+  m_SizeDelta: {x: 512.849, y: 317.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1183400927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183400925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1183400928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183400925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 218956a5c2a6e42d6a60afccf80b002b, type: 3}
+    m_FontSize: 35
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 120
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Tap on a patrol to assasinate it!
+--- !u!222 &1183400929
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183400925}
+  m_CullTransparentMesh: 1
 --- !u!1 &1216805714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +2812,51 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255142659}
+  m_CullTransparentMesh: 1
+--- !u!1 &1387156773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387156774}
+  - component: {fileID: 1387156775}
+  m_Layer: 5
+  m_Name: RoadworkOverlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1387156774
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387156773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 556957651}
+  m_Father: {fileID: 230672827}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1387156775
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387156773}
   m_CullTransparentMesh: 1
 --- !u!1 &1391020460
 GameObject:
@@ -2867,7 +3149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8397,9 +8679,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55a24a3ad8a19b46aed554a1fafc3d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 230672826}
   inventoryUI: {fileID: 475501083}
   cluePanel: {fileID: 1877959771}
   clues: []
+  gameManager: {fileID: 5240002023841849679}
 --- !u!114 &5240002023841849678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8461,8 +8745,12 @@ MonoBehaviour:
   gameOvers: 0
   keysText: {fileID: 983961064}
   keys: 0
+  clues: 0
+  keyDialogue: []
+  clueDialogue: []
   mapManager: {fileID: 0}
   patrolSpeedMultiplier: 0
+  canvas: {fileID: 0}
 --- !u!1 &5241315761557239781
 GameObject:
   m_ObjectHideFlags: 0
@@ -9206,12 +9494,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7276748496020427247, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7276748496020427247, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7276748496020427247, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
       propertyPath: m_FontData.m_FontStyle
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7276748497104613096, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7276748497104613103, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
       propertyPath: m_SizeDelta.x
@@ -9249,6 +9545,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -723.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7276748497819045326, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7276748498004093932, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 2.077
@@ -9260,6 +9560,10 @@ PrefabInstance:
     - target: {fileID: 7276748498004093933, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
       propertyPath: m_Text
       value: '< ALERT > '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7276748498004093933, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7276748496020427246, guid: 90e6960ca4ff3d24491af255c2acae92, type: 3}
@@ -9541,6 +9845,10 @@ PrefabInstance:
       propertyPath: _useDeviceOrientation
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3846925143526291150, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3858097100515818088, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
       propertyPath: m_Name
       value: Player
@@ -9590,9 +9898,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 714303272}
     - target: {fileID: 3858097100515818091, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
+      propertyPath: roadworkOverlay
+      value: 
+      objectReference: {fileID: 1387156773}
+    - target: {fileID: 3858097100515818091, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
       propertyPath: mapManagerStatus
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3858097100515818091, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
+      propertyPath: assassinateOverlay
+      value: 
+      objectReference: {fileID: 370894836}
     - target: {fileID: 3858097100515818091, guid: 09ed472f8bd53f54286c77d940782472, type: 3}
       propertyPath: patrolLayermask.m_Bits
       value: 64

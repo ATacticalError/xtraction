@@ -37,6 +37,9 @@ public class Player : MonoBehaviour
     public float alertTimer = 30;
     public bool alertCountdown = false;
 
+    public GameObject roadworkOverlay;
+    public GameObject assassinateOverlay;
+
     void Awake()
     {
         targetLocation = transform.position;
@@ -114,12 +117,14 @@ public class Player : MonoBehaviour
 
     void SelectRoadwork()
     {
+        roadworkOverlay.SetActive(true);
         print("selecting roadwork");
         if (Input.GetMouseButton(0))
         {
             ray = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, patrolPointLayermask))
             {
+                roadworkOverlay.SetActive(false);
                 abManager.Roadwork(hit.transform.gameObject);
             }
         }
@@ -130,9 +135,11 @@ public class Player : MonoBehaviour
         print("selecting patrol to assassinate");
         if (Input.GetMouseButton(0))
         {
+            assassinateOverlay.SetActive(true);
             ray = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, patrolLayermask))
             {
+                assassinateOverlay.SetActive(false);
                 abManager.Assassinate(hit.transform.gameObject.GetComponent<Patrol>());
             }
         }
