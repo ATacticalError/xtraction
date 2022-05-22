@@ -36,8 +36,8 @@ public abstract class Ability : ScriptableObject
             return;
         }
         abilityButtonText.text = abilityName;
-        UnityEditor.Events.UnityEventTools.AddPersistentListener(abilityButton.onClick, TriggerAbility);
-        // abilityButton.onClick.AddListener(TriggerAbility);
+        // UnityEditor.Events.UnityEventTools.AddPersistentListener(abilityButton.onClick, TriggerAbility);
+        abilityButton.onClick.AddListener(TriggerAbility);
         ApplyTier();
         CreateButtonIcon(ab);
     }

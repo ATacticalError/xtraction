@@ -7,11 +7,13 @@ public class RuntimeDebugDisplay : MonoBehaviour
     public GameObject runtimeHierarchy;
     public GameObject runtimeInspector;
     public GameObject runtimeDebug;
+    public GameObject runtimeRandomAbility;
 
     public void ToggleDebugDisplay()
     {
         runtimeHierarchy.SetActive(!runtimeHierarchy.activeSelf);
         runtimeInspector.SetActive(!runtimeInspector.activeSelf);
         runtimeDebug.SetActive(!runtimeDebug.activeSelf);
+        runtimeRandomAbility.SetActive(!runtimeRandomAbility.activeSelf);
     }
 }

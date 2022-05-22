@@ -14,7 +14,7 @@ public class Patrol : MonoBehaviour
     public bool canMove = true;
     public float moveSpeed = 4.0f;
 
-    public Light spotLight;
+//    public Light spotLight;
 
     public bool canSee = true;
     public float detectionRadius = 3;
@@ -53,9 +53,10 @@ public class Patrol : MonoBehaviour
         {
             Pathing();
         }
-        DetectionLight();
+        // DetectionLight();
+        detectionVisualiser.transform.localScale = new Vector3(1,1,1) * (detectionCol.radius*2);
     }
-
+/*
     void DetectionLight()
     {
         ray = new Ray(transform.position, Vector3.down);
@@ -65,9 +66,9 @@ public class Patrol : MonoBehaviour
             spotLight.range = heightOverPlane + 1;
             spotLight.innerSpotAngle = Mathf.Atan(detectionCol.radius / heightOverPlane) * Mathf.Rad2Deg;
         }
-        detectionVisualiser.transform.localScale = new Vector3(1,1,1) * (detectionCol.radius*2);
-    }
 
+    }
+*/
     void OnTriggerEnter(Collider other)
     {
         if (!isAlerted && other.gameObject.tag == "Player")
