@@ -11,7 +11,12 @@ public class HotspotManager : MonoBehaviour
 
     public Inventory inventory;
 
-    void Awake() {
+    public AudioSource audioSrc;
+    public AudioClip componentFoundClip;
+    public AudioClip clueFoundClip;
+
+    void Awake()
+    {
         InititaliseHotSpots();
     }
 
@@ -20,9 +25,14 @@ public class HotspotManager : MonoBehaviour
         inventory = i;
     }
 
-    public void AddKey() {
+    public void AddKey()
+    {
         inventory.AddKey();
     }
+
+    public void PlayComponentFoundAudio() { audioSrc.PlayOneShot(componentFoundClip, 0.5f); }
+
+    public void PlayClueFoundAudio() { audioSrc.PlayOneShot(clueFoundClip, 0.5f); }
 
 
     public void InititaliseHotSpots()

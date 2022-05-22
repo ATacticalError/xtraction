@@ -17,6 +17,7 @@ public class CluePoint : MonoBehaviour
 
         Debug.Log("Player has passed through clue");
         hsManager.ClueFound();
+        hsManager.PlayClueFoundAudio();
         this.gameObject.SetActive(false);
     }
 }

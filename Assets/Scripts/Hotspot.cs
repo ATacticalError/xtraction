@@ -14,6 +14,8 @@ public class Hotspot : MonoBehaviour
 
     public HotspotManager hsManager;
 
+    public AudioSource src;
+
     void Awake()
     {
         mr = this.GetComponent<MeshRenderer>();
@@ -80,6 +82,7 @@ public class Hotspot : MonoBehaviour
                 {
                     hsManager.AddKey();
                     other.GetComponentInParent<Inventory>().SpawnDialogue(dialogue);
+                    hsManager.PlayComponentFoundAudio();
                     // Enable dialogue object.
                     // TODO: Debug.Log("Removing hotspot from clue pool");
                     // TODO: hsManager.PopHotSpot(this);

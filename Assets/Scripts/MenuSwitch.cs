@@ -9,13 +9,6 @@ public class MenuSwitch : MonoBehaviour
     public GameObject AboutObject;
     public GameObject CreditsObject;
 
-    public void Options()
-    {
-        MainObject.SetActive(false);
-        AboutObject.SetActive(false);
-        OptionsObject.SetActive(true);
-        CreditsObject.SetActive(false);
-    }
     public void Main()
     {
         MainObject.SetActive(true);
