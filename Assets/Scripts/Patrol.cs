@@ -29,6 +29,8 @@ public class Patrol : MonoBehaviour
     RaycastHit hit;
     public float heightOverPlane;
     public GameObject detectionVisualiser;
+    public Animator animator;
+    public GameObject[] pieces;
 
     void Awake()
     {
@@ -76,6 +78,7 @@ public class Patrol : MonoBehaviour
             }
             // Change to alert phase.
             isAlerted = true;
+            animator.SetBool("Alert", true);
             Debug.Log("PlayerDetected");
             StartCoroutine(AlertPhaseRoutine(alertPhaseLength));
         }
@@ -95,6 +98,7 @@ public class Patrol : MonoBehaviour
     public IEnumerator AlertPhaseRoutine(float seconds)
     {
         isAlerted = true;
+        animator.SetBool("Alert", true);
         canMove = false;
         detectionCol.radius = alertDetectionRadius;
         manager.PlayerSpotted(isAlerted, alertPhaseLength);
@@ -103,6 +107,7 @@ public class Patrol : MonoBehaviour
         alertPhaseEnded = true;
         detectionCol.radius = detectionRadius;
         isAlerted = false;
+        animator.SetBool("Alert", false);
         canMove = true;
         manager.PlayerSpotted(isAlerted, alertPhaseLength);
     }
@@ -114,8 +119,13 @@ public class Patrol : MonoBehaviour
         float step = moveSpeed * Time.deltaTime;
         GameObject targetPoint = patrolPath[0];
 
+        Vector3 ylockedpoint = new Vector3(targetPoint.transform.position.x, transform.position.y, targetPoint.transform.position.z);
+        Vector3 direction = (ylockedpoint - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+
         if (Vector3.Distance(transform.position, targetPoint.transform.position) > 0.0001f)
         {
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 3);
             transform.position = Vector3.MoveTowards(transform.position, targetPoint.transform.position, step);
         }
         else
@@ -171,6 +181,17 @@ public class Patrol : MonoBehaviour
     private IEnumerator DestroyedRoutine()
     {
         // TODO: play patrol death animation, wait for length
+        foreach (GameObject part in pieces)
+        {
+            Rigidbody rigidbody = part.GetComponent<Rigidbody>();
+            rigidbody.isKinematic = false;
+            rigidbody.useGravity = true;
+            rigidbody.velocity = new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), Random.Range(-10, 10));
+            rigidbody.angularVelocity = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1));
+            ParticleSystem fireparticles = part.GetComponent<ParticleSystem>();
+            var emission = fireparticles.emission;
+            emission.rateOverTime = 100;
+        }
         yield return new WaitForSeconds(1.0f);
         manager.RemovePatrol(this);
     }
