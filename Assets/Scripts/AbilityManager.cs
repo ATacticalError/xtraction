@@ -150,7 +150,7 @@ public class AbilityManager : MonoBehaviour
     {
         if (!mapManager)
             return;
-        mapManager.RemovePatrol(patrol);
+        patrol.Destroyed();
         player.selectionType = SelectionType.Movement;
     }
 }
