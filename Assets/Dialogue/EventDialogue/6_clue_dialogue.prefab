@@ -951,19 +951,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curLine: 0
   names:
+  - ' '
   - Nova
   - Nova
   - Silas
   sentences:
+  - '*Terminal buzzes*'
   - We have received information that the infiltrator may have weapons and other
     tools to help him successfully take back the components.
   - Stay safe everyone.
   - "Sigh\u2026 progress cannot be stopped, they\u2019re merely delaying it."
   charSprites:
+  - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
   - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
   turnOnObj:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

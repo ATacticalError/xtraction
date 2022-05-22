@@ -951,22 +951,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curLine: 0
   names:
+  - ' '
   - Jagger
   - Jagger
   - Jagger
   - Jagger
   sentences:
-  - To all Freedom Fighters, we have conducted a proper investigation.
-  - We can conclude that Silas is indeed after us.
-  - Everyone should stay on guard and report to HQ immediately with any information
-    regarding him.
-  - Please stay alert.
+  - '*Terminal buzzes*'
+  - '*To all Freedom Fighters, we have conducted a proper investigation.*'
+  - '*We can conclude that Silas is indeed after us.*'
+  - '*Everyone should stay on guard and report to HQ immediately with any information
+    regarding him.*'
+  - '*Please stay alert.*'
   charSprites:
+  - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
   turnOnObj:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

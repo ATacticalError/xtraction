@@ -951,6 +951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curLine: 0
   names:
+  - ' '
   - Freedom Fighter
   - Jagger
   - Freedom Fighter
@@ -958,14 +959,17 @@ MonoBehaviour:
   - Freedom Fighter
   - Silas
   sentences:
-  - "Guys\u2026guys!! A component is missing\u2026"
-  - What?!? How long has it been since it went missing?
-  - Not sure... I went over to check the item, next thing I knew it was gone!
-  - "Everyone remain calm, it is our upmost priority to retrieve the item\u2026 or
-    else mankind will be at stake. Do not let a single other component disappear. "
-  - Roger.
-  - "Tsk, amateurs. Little do they know. I\u2019m coming for the third one. "
+  - '*Terminal buzzes*'
+  - "*Guys\u2026guys!! A component is missing\u2026*"
+  - '*What?!? How long has it been since it went missing?*'
+  - '*Not sure... I went over to check the item, next thing I knew it was gone!*'
+  - "*Everyone remain calm, it is our upmost priority to retrieve the item\u2026
+    or else mankind will be at stake. Do not let a single other component disappear.
+    *"
+  - '*Roger.*'
+  - "*Tsk, amateurs. Little do they know. I\u2019m coming for the third one. *"
   charSprites:
+  - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
@@ -973,6 +977,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
   - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
   turnOnObj:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

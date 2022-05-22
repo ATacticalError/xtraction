@@ -951,6 +951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curLine: 0
   names:
+  - ' '
   - Nova
   - Nova
   - Jagger
@@ -959,6 +960,7 @@ MonoBehaviour:
   - Nova
   - Silas
   sentences:
+  - '*Terminal buzzes*'
   - "Everyone! Silas has gone under our noses and retrieved more components. The
     manor book can not be extracted!! He is not allowed to progress further\u2026!! "
   - "Do everything you can\u2026 For all we know he might have already collected
@@ -969,6 +971,7 @@ MonoBehaviour:
   - Right.
   - "\u2026 Some people can be so difficult. "
   charSprites:
+  - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
   - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
@@ -977,6 +980,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 66b9e7d85d796884f878932c53174c00, type: 3}
   - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
   turnOnObj:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

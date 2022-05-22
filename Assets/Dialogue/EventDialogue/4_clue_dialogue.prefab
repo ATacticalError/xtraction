@@ -951,15 +951,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curLine: 0
   names:
+  - ' '
   - Jagger
   - Jagger
   - Jagger
   sentences:
+  - '*Terminal buzzes*'
   - To all freedom fighters, there are more trails left behind.
   - That means this rat is still running free with the possibility of successfully
     retrieving all components!
   - 'We need everyone to continue to be alert.  '
   charSprites:
+  - {fileID: 21300000, guid: ae6908d5ddf212b4cbb969ea6aace947, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
   - {fileID: 21300000, guid: 04b1c9ac8ffa8f9489d22970b18b3034, type: 3}
