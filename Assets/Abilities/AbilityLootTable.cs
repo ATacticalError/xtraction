@@ -34,7 +34,7 @@ public struct AbilityLootTable
         {
             int currentRangeMax = (currentRangeMin + itm.chance);
             // if the random value is between the cur min and max
-            Debug.Log("Current range min: " + currentRangeMin + "/max: " + currentRangeMax + "randomLootValue: " + randomLootValue);
+//            Debug.Log("Current range min: " + currentRangeMin + "/max: " + currentRangeMax + "randomLootValue: " + randomLootValue);
             if (randomLootValue > currentRangeMin && randomLootValue <= currentRangeMax)
             {
                 return itm.ability;

@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public float patrolSpeedMultiplier;
 
     public GameObject canvas;
+    public GameObject gameEndDialogue;
 
     void Update()
     {
@@ -46,9 +47,6 @@ public class GameManager : MonoBehaviour
                 break;
             case 3:
                 SpawnDialogue(keyDialogue[2]);
-                break;
-            case 4:
-                SpawnDialogue(keyDialogue[3]);
                 break;
         }
         if (keys >= 4)
@@ -88,8 +86,7 @@ public class GameManager : MonoBehaviour
 
     public void CompleteGame()
     {
-        gameCompleteUI.SetActive(true);
-        Time.timeScale = 0.1f;
+        gameEndDialogue.SetActive(true);
         gameComplete = true;
     }
 }

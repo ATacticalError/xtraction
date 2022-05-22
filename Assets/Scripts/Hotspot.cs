@@ -73,12 +73,13 @@ public class Hotspot : MonoBehaviour
             Debug.Log("Player has passed through hotspot");
             mr.enabled = true;
             other.GetComponentInParent<AbilityManager>().AddRandomAbility();
-            other.GetComponentInParent<Inventory>().SpawnDialogue(dialogue);
+
             if (hsManager)
             {
                 if (!isDisabled)
                 {
                     hsManager.AddKey();
+                    other.GetComponentInParent<Inventory>().SpawnDialogue(dialogue);
                     // Enable dialogue object.
                     // TODO: Debug.Log("Removing hotspot from clue pool");
                     // TODO: hsManager.PopHotSpot(this);
