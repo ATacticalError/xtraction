@@ -66,19 +66,23 @@ public class Player : MonoBehaviour
 
     public void Spotted(bool detected, float alertPhaseLength)
     {
-        if(detected) {
+        if (detected)
+        {
             alertOverlay.SetActive(true);
             alertAnimator.SetTrigger("On");
             alertTimer = alertPhaseLength;
             Debug.Log(alertPhaseLength);
             alertCountdown = true;
-        } else {
+        }
+        else
+        {
             alertAnimator.SetTrigger("Off");
             Invoke("AlertOff", 1);
         }
     }
 
-    public void AlertOff() {
+    public void AlertOff()
+    {
         alertCountdown = false;
         alertOverlay.SetActive(false);
     }
@@ -106,9 +110,11 @@ public class Player : MonoBehaviour
             if (Vector3.Distance(transform.position, targetLocation) > 0.0001f)
                 transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
         }
-        if(alertCountdown) {
+        if (alertCountdown)
+        {
             alertTimer -= Time.deltaTime;
-            if(alertTimer <= 0) {
+            if (alertTimer <= 0)
+            {
                 alertTimer = 0;
             }
             alertTimerText.text = ((int)alertTimer).ToString();
@@ -147,6 +153,7 @@ public class Player : MonoBehaviour
 
     void SelectMovement()
     {
+
         bool click = false;
         if (Input.GetMouseButtonDown(0))
         {
@@ -168,6 +175,18 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            Debug.Log("Tapped");
+            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, movementLayermask))
+            {
+                Debug.Log("Tapped a valid location");
+                if (canMove)
+                    targetLocation = hit.point;
+            }
+
+        }
     }
 }
 

@@ -8,6 +8,7 @@ public class RuntimeDebugDisplay : MonoBehaviour
     public GameObject runtimeInspector;
     public GameObject runtimeDebug;
     public GameObject runtimeRandomAbility;
+    public GameObject runtimeTouchMovement;
 
     public void ToggleDebugDisplay()
     {
@@ -15,5 +16,6 @@ public class RuntimeDebugDisplay : MonoBehaviour
         runtimeInspector.SetActive(!runtimeInspector.activeSelf);
         runtimeDebug.SetActive(!runtimeDebug.activeSelf);
         runtimeRandomAbility.SetActive(!runtimeRandomAbility.activeSelf);
+        runtimeTouchMovement.SetActive(!runtimeTouchMovement.activeSelf);
     }
 }
